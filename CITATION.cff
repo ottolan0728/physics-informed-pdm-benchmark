@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "Physics-informed Benchmarking Framework for Deployment-oriented Predictive Maintenance"
+
+message: >
+  If you use this repository, please cite the accompanying paper.
+
+type: software
+
+authors:
+  - family-names: Tseng
+    given-names: Chun-Jan
+
+repository-code: "https://github.com/ottolan0728/physics-informed-pdm-benchmark"
+
+license: MIT
+
+abstract: >
+  This repository contains the implementation of a physics-informed
+  benchmarking framework for deployment-oriented predictive maintenance
+  using the publicly available AI4I 2020 Predictive Maintenance Dataset.
+
+keywords:
+  - Predictive Maintenance
+  - Industrial Internet of Things
+  - Machine Learning
+  - Benchmarking
+  - Physics-informed
+  - Random Forest
+  - XGBoost
+  - Feature Engineering
+  - AI4I
+
+version: "1.0"
+
+date-released: 2026-01-01
