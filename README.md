@@ -10,7 +10,7 @@ This repository accompanies the manuscript:
 
 
 
-submitted to \*Sensors (MDPI)\*.
+accepted for publication in \*Sensors (MDPI)\*.
 
 
 
@@ -157,12 +157,9 @@ The repository will provide scripts for:
 \## Project Status
 
 
+This repository accompanies the following accepted article in Sensors (MDPI):
 
-This repository is currently under active development and accompanies the revision of the manuscript submitted to \*Sensors\*.
-
-
-
-Additional documentation and source code will be released together with the final publication.
+A Physics-informed Benchmarking Framework for Machine Learning and Tree-Based Ensembles in IIoT-enabled Predictive Maintenance
 
 
 
