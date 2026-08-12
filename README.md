@@ -50,7 +50,19 @@ docs/                 protocol, provenance, and crosswalk
 tests/                feature-engineering and configuration checks
 ```
 
-## Citation and license
+## How to cite
 
-Citation metadata are provided in `CITATION.cff`. Code and documentation are released under the MIT License. Figure reuse remains subject to the published article's license.
+If this repository, its code, or its published benchmark results support your work, please cite the associated article:
 
+> Su, Y.-K., & Tseng, C.-J. (2026). A Physics-Informed Benchmarking Framework for Machine Learning and Tree-Based Ensembles in IIoT-Enabled Predictive Maintenance. *Sensors, 26*(16), 5026. https://doi.org/10.3390/s26165026
+
+Available citation paths:
+
+- Full APA, IEEE, and BibTeX formats: [CITING.md](CITING.md)
+- Machine-readable GitHub citation metadata: [CITATION.cff](CITATION.cff)
+- Publisher page and permanent DOI: [https://doi.org/10.3390/s26165026](https://doi.org/10.3390/s26165026)
+- On GitHub, select **Cite this repository** in the repository sidebar to export the citation metadata.
+
+## License
+
+Code and documentation are released under the MIT License. Figure reuse remains subject to the published article's license.
