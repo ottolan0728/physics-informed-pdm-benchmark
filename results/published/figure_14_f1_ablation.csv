@@ -1,0 +1,6 @@
+model,original_features,physics_informed_features,relative_improvement_percent
+Logistic Regression,0.604,0.825,36.6
+Random Forest,0.893,0.950,6.4
+XGBoost,0.869,0.939,8.1
+Isolation Forest,0.467,0.607,29.9
+

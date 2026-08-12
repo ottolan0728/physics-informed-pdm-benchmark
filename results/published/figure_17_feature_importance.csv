@@ -1,0 +1,21 @@
+rank,feature,gain_importance
+1,Wear-Stress Index,0.156
+2,Approximate Spindle Power,0.128
+3,Torque (Nm),0.091
+4,Tool Wear (min),0.075
+5,Spindle Speed Ratio,0.064
+6,Feed per Tooth (mm/tooth),0.053
+7,Rolling Mean Torque,0.048
+8,Temperature Gradient (°C),0.044
+9,Vibration RMS (mm/s),0.039
+10,AE Current (A),0.030
+11,Radial Force (N),0.026
+12,Axial Force (N),0.022
+13,Coolant Pressure (bar),0.018
+14,AE Voltage (V),0.015
+15,Process Time (min),0.012
+16,Material Removal Rate,0.008
+17,Surface Roughness (μm),0.005
+18,Air Temperature (°C),0.003
+19,Ambient Humidity (%),0.002
+
