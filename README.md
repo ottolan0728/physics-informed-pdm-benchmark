@@ -1,199 +1,56 @@
-\# Physics-informed Benchmarking Framework for Deployment-oriented Predictive Maintenance
+# Physics-Informed Benchmarking Framework for Predictive Maintenance
 
+Official reproducibility repository for:
 
+> Yi-Kai Su and Chun-Jan Tseng, “A Physics-Informed Benchmarking Framework for Machine Learning and Tree-Based Ensembles in IIoT-Enabled Predictive Maintenance,” *Sensors*, 26(16), 5026, 2026. https://doi.org/10.3390/s26165026
 
-This repository accompanies the manuscript:
+The framework evaluates Logistic Regression, Isolation Forest, Random Forest, and XGBoost on the AI4I 2020 Predictive Maintenance dataset. It augments the original sensor variables with six engineering-derived features and evaluates the effect of those features under severe class imbalance.
 
+## Quick start
 
-
-\*\*"A Physics-informed Benchmarking Framework for Machine Learning and Tree-Based Ensembles in IIoT-enabled Predictive Maintenance"\*\*
-
-
-
-accepted for publication in \*Sensors (MDPI)\*.
-
-
-
-\---
-
-
-
-\## Overview
-
-
-
-This repository provides the implementation of the proposed physics-informed benchmarking framework for deployment-oriented predictive maintenance in Industrial Internet of Things (IIoT) environments.
-
-
-
-The framework integrates physics-informed feature engineering with systematic benchmarking of machine learning and tree-based ensemble methods using the publicly available AI4I 2020 Predictive Maintenance Dataset.
-
-
-
-The repository is intended to support the reproducibility of the experimental results presented in the accompanying manuscript.
-
-
-
-\---
-
-
-
-\## Research Highlights
-
-
-
-\- Physics-informed feature engineering
-
-\- Benchmarking framework for predictive maintenance
-
-\- Machine learning and tree-based ensemble models
-
-\- Mutual Information feature analysis
-
-\- Feature ablation analysis
-
-\- Matthews Correlation Coefficient (MCC) evaluation
-
-\- Reproducible experimental workflow
-
-
-
-\---
-
-
-
-\## Repository Structure
-
-
-
+```bash
+python -m venv .venv
+# Windows: .venv\\Scripts\\activate
+# macOS/Linux: source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-physics-informed-pdm-benchmark/
+Download `ai4i2020.csv` from the [AI4I 2020 Predictive Maintenance dataset](https://www.kaggle.com/datasets/stephanmatzka/predictive-maintenance-dataset) and place it at `data/ai4i2020.csv`. The dataset is not redistributed by this repository.
 
-│
+Run the complete workflow:
 
-├── src/
-
-├── notebooks/
-
-├── data/
-
-├── figures/
-
-├── results/
-
-├── docs/
-
-└── tests/
-
+```bash
+python -m src.run_experiment
 ```
 
-
-
-\---
-
-
-
-\## Dataset
-
-
-
-This study uses the \*\*AI4I 2020 Predictive Maintenance Dataset\*\*.
-
-
-
-The dataset is publicly available and is \*\*not redistributed\*\* in this repository.
-
-
-
-Detailed download instructions will be provided in the `data/` directory.
-
-
-
-\---
-
-
-
-\## Installation
-
-
-
-Instructions for environment setup and package installation will be provided in a future update.
-
-
-
-\---
-
-
-
-\## Reproducing the Paper
-
-
-
-The repository will provide scripts for:
-
-
-
-1\. Data preprocessing
-
-2\. Physics-informed feature engineering
-
-3\. Benchmark model training
-
-4\. Performance evaluation
-
-5\. Feature ablation analysis
-
-6\. MCC evaluation
-
-7\. Figure reproduction
-
-
-
-\---
-
-
-
-\## Project Status
-
-
-This repository accompanies the following accepted article in Sensors (MDPI):
-
-A Physics-informed Benchmarking Framework for Machine Learning and Tree-Based Ensembles in IIoT-enabled Predictive Maintenance
-
-
-
-\---
-
-
-
-\## Citation
-
-
-
-Citation information will be updated after the paper is accepted.
-
-
-
-\---
-
-
-
-\## License
-
-
-
-License information will be provided in a future update.
-
-
-
-\---
-
-
-
-\## Contact
-
-
-
-For questions regarding this repository, please contact the corresponding author.
+Generated artifacts are written to `results/generated/`. Published reference values transcribed from the paper are stored separately in `results/published/` and are never overwritten.
+
+## Reproducibility scope
+
+- Fixed random seed: 42
+- Stratified 80:20 train–test split
+- Standardization fitted on the training partition only
+- SMOTE applied to the training partition only
+- Model configurations follow Table 6 of the published article
+- Both original-only and original-plus-physics-informed feature sets are evaluated
+- Accuracy, precision, recall, F1, ROC-AUC, balanced accuracy, MCC, confusion matrices, and per-sample latency are exported
+
+See [REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for the protocol and [RESULTS_CROSSWALK.md](docs/RESULTS_CROSSWALK.md) for the paper-to-repository mapping.
+
+## Repository layout
+
+```text
+src/                 executable implementation
+notebooks/           thin notebook entry point
+data/                dataset acquisition instructions
+results/published/   values reported in the article
+results/generated/   local rerun outputs (gitignored)
+figures/              final published figures
+docs/                 protocol, provenance, and crosswalk
+tests/                feature-engineering and configuration checks
+```
+
+## Citation and license
+
+Citation metadata are provided in `CITATION.cff`. Code and documentation are released under the MIT License. Figure reuse remains subject to the published article's license.
 

@@ -1,0 +1,14 @@
+rank,feature,category,mi_score
+1,Torque,Original,0.0469
+2,Approximate Spindle Power,Mechanical,0.0446
+3,Speed-Torque Ratio,Interaction,0.0444
+4,Rotational Speed,Original,0.0372
+5,Wear-Stress Index,Interaction,0.0344
+6,TW Rolling Mean,Statistical,0.0139
+7,Tool Wear,Original,0.0135
+8,Temperature Gradient,Thermal,0.0116
+9,Process Temperature,Original,0.0049
+10,Air Temperature,Original,0.0046
+11,TW Rolling Std,Statistical,0.0000
+12,Machine Type (One-hot),Categorical,0.0000
+
