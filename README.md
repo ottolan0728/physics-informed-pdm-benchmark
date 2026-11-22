@@ -23,7 +23,7 @@ Download the third-party [AI4I 2020 Predictive Maintenance dataset](https://www.
 python -m src.run_experiment
 ```
 
-The lightweight [notebook launcher](notebooks/reproduce_paper.ipynb) invokes the same script. A fully executed independent companion notebook has been prepared separately for author review; it is not part of this repository until verified and uploaded.
+The lightweight [notebook launcher](notebooks/reproduce_paper.ipynb) invokes the script. The new [independent rerun companion notebook](notebooks/independent_rerun_companion.ipynb) includes executable dataset checks, feature inspection, model results, plots, and a published-versus-rerun table. **Its saved cells are intentionally unexecuted; run all cells with your own dataset.** A separately audited R15 notebook with executed outputs exists in the author's review package, but has not been uploaded here.
 
 Fresh outputs are written to `results/generated/` (gitignored). Published reference values in `results/published/` are never overwritten.
 
